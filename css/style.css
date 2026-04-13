@@ -308,39 +308,13 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: var(--dark);
+  background: linear-gradient(135deg, var(--dark) 0%, #0e2323 60%, #162b2b 100%);
 }
 
-/* Slideshow layers */
-.hero-slides {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-.hero-slide.active {
-  opacity: 1;
-}
-
-/* Dark overlay for text legibility */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(26, 46, 46, 0.65);
-  z-index: 2;
-}
-
-/* Hero text above overlay */
+/* Hero text */
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   text-align: center;
   padding: 80px 20px 60px;
   width: 100%;
@@ -1158,7 +1132,51 @@ ul {
 }
 
 /* ======================
-   19. RESPONSIVE
+   19. IMAGE PAIR (1×2) & IMAGE TRIO (1×3)
+   ====================== */
+.image-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.image-trio-item {
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.image-trio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.image-trio-item:hover img {
+  transform: scale(1.04);
+}
+
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+.image-pair-item {
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.image-pair-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.image-pair-item:hover img {
+  transform: scale(1.04);
+}
+
+/* ======================
+   20. RESPONSIVE
    ====================== */
 @media (max-width: 1024px) {
   .features-grid {
@@ -1209,6 +1227,8 @@ ul {
   #hero.hero-inner { min-height: 40vh; }
 
   /* Grids */
+  .image-trio        { grid-template-columns: 1fr; }
+  .image-pair        { grid-template-columns: 1fr; }
   .cards-grid        { grid-template-columns: 1fr; }
   .about-story       { grid-template-columns: 1fr; gap: 32px; }
   .about-story-image { order: -1; }

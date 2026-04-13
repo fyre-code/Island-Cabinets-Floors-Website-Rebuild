@@ -66,17 +66,7 @@
 
 
   <!-- HERO -->
-  <!--
-    Recommended hero images: beautiful finished project photos —
-    kitchen, flooring, or closet. 1920×1080px minimum.
-  -->
   <section id="hero" class="hero-inner">
-    <div class="hero-slides">
-      <div class="hero-slide active" style="background-image: url('images/hero/gallery-hero-1.jpg')"></div>
-      <div class="hero-slide"        style="background-image: url('images/hero/gallery-hero-2.jpg')"></div>
-      <div class="hero-slide"        style="background-image: url('images/hero/gallery-hero-3.jpg')"></div>
-    </div>
-    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-content">
       <span class="hero-eyebrow animate-up">Flooring &bull; Cabinets &bull; Closets</span>
       <h1 class="hero-title animate-up delay-1">Our Work</h1>
@@ -97,19 +87,8 @@
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="flooring">Flooring</button>
         <button class="filter-btn" data-filter="cabinets">Cabinets</button>
-        <button class="filter-btn" data-filter="closets">Closets</button>
       </div>
 
-      <!-- Carousel -->
-      <!--
-        GALLERY IMAGES
-        ==============
-        TODO: Replace the src placeholder paths below with your actual project photo URLs
-        (Supabase storage URLs or relative paths in images/gallery/).
-        Each .gallery-item needs a data-category of "flooring", "cabinets", or "closets"
-        for the filter tabs to work correctly.
-        Recommended minimum image size: 800×800px (square or close to it).
-      -->
       <div class="gallery-carousel" id="gallery-carousel">
         <button class="carousel-btn prev" id="gallery-prev" aria-label="Previous photos">
           <i class="fas fa-chevron-left"></i>
@@ -119,40 +98,81 @@
           <div class="gallery-track" id="gallery-track">
 
             <div class="gallery-item" data-category="flooring">
-              <img src="images/gallery/flooring-1.jpg" alt="Hardwood flooring installation in a Melbourne, FL living room" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107332905_wood-look-plank-flooring-installation-lake-worth.jpg"
+                   alt="Modern bedroom featuring light oak wood-look plank flooring. A white dresser with a TV mounted above it sits against a light grey wall."
+                   loading="lazy">
             </div>
+
             <div class="gallery-item" data-category="flooring">
-              <img src="images/gallery/flooring-2.jpg" alt="Luxury vinyl plank flooring installed by Island Cabinets &amp; Floors" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107341796_dark-hardwood-spiral-staircase-installation-lake-worth.jpg"
+                   alt="Elegant modern home interior showcasing a custom dark hardwood spiral staircase with intricate wrought-iron spindles. A unique glass chandelier hangs above the stairs."
+                   loading="lazy">
             </div>
+
             <div class="gallery-item" data-category="flooring">
-              <img src="images/gallery/flooring-3.jpg" alt="Tile flooring installation in a Brevard County kitchen" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107336502_custom-geometric-tile-inlay-entryway-lake-worth.jpg"
+                   alt="Modern grand entryway featuring a custom geometric black and white tile floor inlay with high-gloss porcelain tiles."
+                   loading="lazy">
             </div>
+
             <div class="gallery-item" data-category="flooring">
-              <img src="images/gallery/flooring-4.jpg" alt="Open-plan living room with new engineered hardwood floors" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107337358_custom-hardwood-foyer-inlay-lake-worth.jpg"
+                   alt="Luxury entryway featuring a custom geometric wood floor inlay made of medium-tone oak planks in a square pattern."
+                   loading="lazy">
             </div>
+
+            <div class="gallery-item" data-category="flooring">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107342661_geometric-marble-bathroom-tile-installation-lake-worth.jpg"
+                   alt="Modern bathroom remodel featuring white and grey geometric marble floor tiles and a textured white 3D wall tile in the shower."
+                   loading="lazy">
+            </div>
+
+            <div class="gallery-item" data-category="flooring">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107331224_rustic-loft-flooring-and-custom-woodwork-lake-worth.jpg"
+                   alt="Rustic attic loft featuring wood-look plank flooring, exposed brick pillars, and custom live-edge wood shelving and bar counters."
+                   loading="lazy">
+            </div>
+
+            <div class="gallery-item" data-category="flooring">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107338184_custom-hardwood-inlay-entryway-remodel-lake-worth.jpg"
+                   alt="Close-up of a custom cherry hardwood floor installation featuring a dark walnut border inlay in an entryway."
+                   loading="lazy">
+            </div>
+
+            <div class="gallery-item" data-category="flooring">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107340001_custom-wood-foyer-inlay-cherry-walnut-lake-worth.jpg"
+                   alt="Foyer remodel featuring a custom square wood floor inlay with cherry planks and a dark walnut perimeter border."
+                   loading="lazy">
+            </div>
+
+            <div class="gallery-item" data-category="flooring">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107326452_herringbone-hardwood-floor-hallway-lake-worth.jpg"
+                   alt="Elegant hallway featuring light oak hardwood flooring in a herringbone pattern with a straight plank border."
+                   loading="lazy">
+            </div>
+
             <div class="gallery-item" data-category="cabinets">
-              <img src="images/gallery/cabinets-1.jpg" alt="Custom white shaker kitchen cabinets in Melbourne, FL" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107329447_modern-walk-in-shower-bathroom-remodel-lake-worth.jpg"
+                   alt="Master bathroom featuring a large walk-in shower with blue and grey marble-look porcelain tile, a glass block window, and matching stone-look flooring."
+                   loading="lazy">
             </div>
+
             <div class="gallery-item" data-category="cabinets">
-              <img src="images/gallery/cabinets-2.jpg" alt="Dark wood kitchen cabinet installation by Island Cabinets &amp; Floors" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107335612_custom-bedroom-built-in-cabinets-lake-worth.jpg"
+                   alt="Modern bedroom featuring dark grey built-in base cabinets with white marble-look quartz countertops and grey wood-look plank flooring."
+                   loading="lazy">
             </div>
+
             <div class="gallery-item" data-category="cabinets">
-              <img src="images/gallery/cabinets-3.jpg" alt="Bathroom vanity cabinet installation in Brevard County" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107343688_granite-double-vanity-bathroom-remodel-lake-worth.jpg"
+                   alt="Master bathroom featuring a double vanity with grey and white natural stone countertops, white shaker cabinets, and round wood-framed mirrors."
+                   loading="lazy">
             </div>
+
             <div class="gallery-item" data-category="cabinets">
-              <img src="images/gallery/cabinets-4.jpg" alt="Full kitchen remodel with custom cabinetry and new floors" loading="lazy">
-            </div>
-            <div class="gallery-item" data-category="closets">
-              <img src="images/gallery/closets-1.jpg" alt="Custom walk-in closet system installed in Melbourne, FL" loading="lazy">
-            </div>
-            <div class="gallery-item" data-category="closets">
-              <img src="images/gallery/closets-2.jpg" alt="Built-in reach-in closet organizer by Island Cabinets &amp; Floors" loading="lazy">
-            </div>
-            <div class="gallery-item" data-category="closets">
-              <img src="images/gallery/closets-3.jpg" alt="Master bedroom walk-in closet with custom shelving" loading="lazy">
-            </div>
-            <div class="gallery-item" data-category="closets">
-              <img src="images/gallery/closets-4.jpg" alt="Custom pantry and linen closet system in Brevard County" loading="lazy">
+              <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107333835_modern-shaker-double-vanity-natural-stone-lake-worth.jpg"
+                   alt="Close-up of a double bathroom vanity with white shaker cabinets, white and grey natural stone countertops, and modern brushed nickel faucets."
+                   loading="lazy">
             </div>
 
           </div>

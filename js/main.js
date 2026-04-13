@@ -34,50 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // =====================
-  // HERO SLIDESHOW
-  // =====================
-  const hero   = document.getElementById('hero');
-  const slides = hero ? hero.querySelectorAll('.hero-slide') : [];
-
-  if (slides.length > 1) {
-    let currentSlide = 0;
-    let slideshowTimer = null;
-
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-
-    function startSlideshow() {
-      if (!slideshowTimer) {
-        slideshowTimer = setInterval(nextSlide, 5000);
-      }
-    }
-
-    function stopSlideshow() {
-      if (slideshowTimer) {
-        clearInterval(slideshowTimer);
-        slideshowTimer = null;
-      }
-    }
-
-    // Pause when hero is off-screen (saves CPU / battery)
-    const heroObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startSlideshow();
-        } else {
-          stopSlideshow();
-        }
-      });
-    }, { threshold: 0.05 });
-
-    heroObserver.observe(hero);
-  }
-
-
-  // =====================
   // FAQ ACCORDION
   // =====================
   document.querySelectorAll('.faq-question').forEach(btn => {
@@ -165,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dot = document.createElement('button');
         dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
         dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-        dot.addEventListener('click', () => goTo(i * visible));
+        dot.addEventListener('click', () => { goTo(i * visible); resetAutoAdvance(); });
         dotsContainer.appendChild(dot);
       }
     }
@@ -188,8 +144,26 @@ document.addEventListener('DOMContentLoaded', () => {
       updateDots();
     };
 
-    prevBtn.addEventListener('click', () => goTo(current - visible));
-    nextBtn.addEventListener('click', () => goTo(current + visible));
+    // Auto-advance every 15 seconds
+    let autoAdvanceTimer = setInterval(() => {
+      const items = getVisibleItems();
+      const maxIndex = Math.max(0, items.length - visible);
+      const next = current + visible > maxIndex ? 0 : current + visible;
+      goTo(next);
+    }, 15000);
+
+    function resetAutoAdvance() {
+      clearInterval(autoAdvanceTimer);
+      autoAdvanceTimer = setInterval(() => {
+        const items = getVisibleItems();
+        const maxIndex = Math.max(0, items.length - visible);
+        const next = current + visible > maxIndex ? 0 : current + visible;
+        goTo(next);
+      }, 15000);
+    }
+
+    prevBtn.addEventListener('click', () => { goTo(current - visible); resetAutoAdvance(); });
+    nextBtn.addEventListener('click', () => { goTo(current + visible); resetAutoAdvance(); });
 
     window.addEventListener('resize', () => {
       visible = getVisibleCount();
@@ -212,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const diff = touchStartX - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 40) {
           goTo(diff > 0 ? current + visible : current - visible);
+          resetAutoAdvance();
         }
       });
     }
