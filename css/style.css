@@ -1120,6 +1120,48 @@ ul {
 }
 
 /* ======================
+   17e. LEGAL PAGES
+   ====================== */
+.legal-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.legal-updated {
+  font-size: 0.88rem;
+  color: #888;
+  margin-bottom: 32px;
+}
+.legal-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 40px 0 12px;
+}
+.legal-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 28px 0 10px;
+}
+.legal-content p {
+  margin-bottom: 14px;
+  line-height: 1.75;
+  color: var(--text-dark);
+}
+.legal-content ul {
+  margin: 0 0 16px 24px;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+.legal-content a {
+  color: var(--teal);
+  text-decoration: underline;
+}
+.legal-content a:hover {
+  color: var(--teal-dark);
+}
+
+/* ======================
    17d. MAP SECTION
    ====================== */
 #map-section .section-title {
