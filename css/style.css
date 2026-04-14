@@ -58,7 +58,7 @@ ul {
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--dark);
   margin: 0 0 12px;
@@ -1350,8 +1350,9 @@ ul {
   }
   .nav-toggle { display: flex; }
 
-  /* Hero */
-  .hero-title { font-size: 2.2rem; }
+  /* Hero & headings */
+  .hero-title    { font-size: 2.2rem; }
+  .section-title { font-size: 2.2rem; }
   .hero-title-sub { font-size: 1.1rem; }
   #hero.hero-inner { min-height: 40vh; }
 
@@ -1374,7 +1375,7 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .section-title { font-size: 1.6rem; }
+  .section-title { font-size: 1.8rem; }
   .hero-title    { font-size: 1.8rem; }
   .features-grid { grid-template-columns: 1fr; }
   .process-4col  { grid-template-columns: repeat(2, 1fr); }
