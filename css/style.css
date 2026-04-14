@@ -1082,7 +1082,76 @@ ul {
 }
 
 /* ======================
-   17c. SERVICES 2-COLUMN
+   17c. SECTION IMAGE BG
+   ====================== */
+.section-img-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.section-img-bg .section-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 46, 46, 0.78);
+  z-index: 0;
+}
+.section-img-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li i {
+  color: var(--teal);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.checklist.checklist-compact {
+  margin: 1rem 0;
+  max-width: none;
+}
+
+/* Flooring split (section 3) */
+.flooring-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.flooring-split-text p {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 14px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.flooring-split-image {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.flooring-split-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ======================
+   17d. SERVICES 2-COLUMN
    ====================== */
 .services-2col {
   display: grid;
@@ -1430,6 +1499,7 @@ ul {
   .image-pair        { grid-template-columns: 1fr; }
   .cards-grid        { grid-template-columns: 1fr; }
   .about-story       { grid-template-columns: 1fr; gap: 32px; }
+  .flooring-split    { grid-template-columns: 1fr; gap: 32px; }
   .about-story-image { order: -1; }
   .process-steps     { grid-template-columns: 1fr; }
   .contact-grid      { grid-template-columns: 1fr; }
