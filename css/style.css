@@ -760,6 +760,7 @@ ul {
   flex-shrink: 0;
   width: 100%;
   aspect-ratio: 4/3;
+  max-height: 55vh;
   overflow: hidden;
   cursor: pointer;
   background: #ccc;
