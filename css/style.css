@@ -1055,7 +1055,34 @@ ul {
 }
 
 /* ======================
-   17b. SERVICES 2-COLUMN
+   17b. ABOUT BACKGROUND
+   ====================== */
+.about-bg {
+  position: relative;
+  background-image: url('https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776199527839_About-background-image.png');
+  background-size: cover;
+  background-position: center;
+}
+.about-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 46, 46, 0.78);
+  z-index: 0;
+}
+.about-bg .container {
+  position: relative;
+  z-index: 1;
+}
+.about-bg .section-title {
+  color: #fff;
+}
+.about-bg .about-story-text p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ======================
+   17c. SERVICES 2-COLUMN
    ====================== */
 .services-2col {
   display: grid;
