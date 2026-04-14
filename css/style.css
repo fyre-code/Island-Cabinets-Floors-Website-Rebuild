@@ -776,7 +776,7 @@ ul {
 }
 
 .carousel-btn {
-  background: var(--dark);
+  background: var(--teal);
   color: var(--white);
   border: none;
   width: 44px;
@@ -789,7 +789,7 @@ ul {
   flex-shrink: 0;
   transition: background 0.2s;
 }
-.carousel-btn:hover { background: var(--teal); }
+.carousel-btn:hover { background: var(--teal-dark); }
 .carousel-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
 .carousel-dots {
