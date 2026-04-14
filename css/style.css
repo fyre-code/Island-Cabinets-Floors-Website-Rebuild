@@ -213,8 +213,7 @@ ul {
    4. HEADER & NAV
    ====================== */
 #site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   background: var(--dark);
   box-shadow: 0 2px 12px rgba(0,0,0,0.25);
@@ -1147,7 +1146,7 @@ ul {
   padding: 60px 0 40px;
 }
 .footer-logo {
-  height: 80px;
+  height: 100px;
   width: auto;
   align-self: flex-start;
   margin-bottom: 16px;
@@ -1350,7 +1349,6 @@ ul {
     padding: 12px;
   }
   .nav-toggle { display: flex; }
-  #site-header { position: relative; }
 
   /* Hero */
   .hero-title { font-size: 2.2rem; }
