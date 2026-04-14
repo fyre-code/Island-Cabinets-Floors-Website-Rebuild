@@ -131,9 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (track && prevBtn && nextBtn) {
     function getVisibleCount() {
-      if (window.innerWidth <= 480)  return 1;
-      if (window.innerWidth <= 1025) return 2;
-      return 4;
+      return 1;
     }
 
     function getVisibleItems() {
