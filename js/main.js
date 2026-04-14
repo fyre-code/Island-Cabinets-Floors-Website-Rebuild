@@ -34,6 +34,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // =====================
+  // HERO SLIDESHOW
+  // =====================
+  const hero   = document.getElementById('hero');
+  const slides = hero ? hero.querySelectorAll('.hero-slide') : [];
+
+  if (slides.length > 1) {
+    let currentSlide = 0;
+    let slideshowTimer = null;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function startSlideshow() {
+      if (!slideshowTimer) slideshowTimer = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlideshow() {
+      if (slideshowTimer) { clearInterval(slideshowTimer); slideshowTimer = null; }
+    }
+
+    const heroObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) startSlideshow(); else stopSlideshow();
+      });
+    }, { threshold: 0.05 });
+
+    heroObserver.observe(hero);
+  }
+
+
+  // =====================
   // FAQ ACCORDION
   // =====================
   document.querySelectorAll('.faq-question').forEach(btn => {

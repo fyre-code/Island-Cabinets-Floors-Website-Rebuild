@@ -45,20 +45,16 @@
 </head>
 <body>
 
-  <!-- ============================
-       HEADER
-       ============================ -->
+  <!-- HEADER -->
   <header id="site-header">
     <div class="container nav-inner">
-
       <div class="nav-brand">
         <a href="index.html" class="brand-logo-link" aria-label="Island Cabinets &amp; Floors — Home">
           <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776104346565_island-cabinets-and-floors-logo.png" alt="Island Cabinets &amp; Floors logo" class="brand-logo">
         </a>
       </div>
-
       <nav id="nav-links" class="nav-links" aria-label="Main navigation">
-        <a href="index.html"    class="active">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="flooring.html">Flooring</a>
         <a href="cabinets.html">Cabinets</a>
@@ -67,35 +63,39 @@
         <a href="blog.html">Blog</a>
         <a href="contact.html" class="nav-cta">Contact</a>
       </nav>
-
       <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
     </div>
   </header>
 
 
   <!-- HERO -->
+  <!--
+    AI IMAGE PROMPTS FOR HERO BACKGROUND (1920×1080px, photorealistic, no people):
+    1. "A finished kitchen with custom dark walnut shaker cabinets, quartz waterfall island, and warm pendant lighting. High-end residential interior photography."
+    2. "Wide-plank light oak hardwood flooring in a bright open-plan living room with natural light and neutral furnishings. Professional interior photography."
+    3. "A spa-style master bathroom with floor-to-ceiling custom white shaker vanity cabinets, marble countertops, and a frameless glass shower. Professional interior photography."
+    4. "A luxury custom walk-in closet with white built-in cabinetry, integrated LED lighting, a center island with velvet-lined drawers, and organized shelving. Professional interior photography."
+    5. "An elegant residential entryway with a custom geometric hardwood floor inlay in light oak and dark walnut. High ceilings, natural light. Professional real estate photography."
+  -->
   <section id="hero">
-
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: url('images/hero/home-hero-1.jpg')"></div>
+      <div class="hero-slide"        style="background-image: url('images/hero/home-hero-2.jpg')"></div>
+      <div class="hero-slide"        style="background-image: url('images/hero/home-hero-3.jpg')"></div>
+      <div class="hero-slide"        style="background-image: url('images/hero/home-hero-4.jpg')"></div>
+      <div class="hero-slide"        style="background-image: url('images/hero/home-hero-5.jpg')"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-content">
-      <span class="hero-eyebrow animate-up">Veteran-Owned &bull; Melbourne, Florida</span>
-      <h1 class="hero-title animate-up delay-1">
-        Your Local Flooring &amp;<br>Cabinet Experts
-        <span class="hero-title-sub">Serving Brevard County for 30+ Years</span>
-      </h1>
-      <p class="hero-desc animate-up delay-2">
-        From hardwood floors to custom cabinets and closets — we bring craftsmanship,
-        integrity, and a commitment to excellence to every project.
-      </p>
-
-      <div class="hero-cta-stack animate-up delay-3">
+      <h1 class="hero-title animate-up">Cabinets &amp; Flooring in Brevard County, Florida</h1>
+      <div class="hero-cta-stack animate-up delay-1">
         <a href="contact.html" class="btn btn-teal hero-btn">
-          <span class="btn-line-1"><i class="fas fa-calendar-check"></i> Book a Measure</span>
+          <i class="fas fa-calendar-check"></i> Book a Measure
         </a>
         <a href="tel:3212416460" class="btn btn-outline hero-btn">
-          <span class="btn-line-1"><i class="fas fa-phone"></i> Call Us</span>
+          <span class="btn-line-1"><i class="fas fa-phone"></i> Call Now</span>
           <span class="btn-line-2">(321) 241-6460</span>
         </a>
       </div>
@@ -103,100 +103,51 @@
   </section>
 
 
-  <!-- ============================
-       ABOUT SNAPSHOT
-       ============================ -->
-  <section id="about-snapshot" class="section-padding">
+  <!-- SERVICES -->
+  <section id="services" class="section-padding">
     <div class="container">
-      <h2 class="section-title">Why Island Cabinets &amp; Floors?</h2>
-      <p class="section-subtitle">Trusted in Brevard County for over three decades.</p>
+      <h2 class="section-title">Services</h2>
 
-      <div class="cards-grid">
+      <div class="services-2col">
 
-        <div class="card">
-          <i class="fas fa-medal card-icon"></i>
-          <h3>Veteran-Owned</h3>
-          <p>Our business is rooted in the values instilled through military service — discipline, reliability, and a job done right the first time.</p>
+        <div class="service-col">
+          <h3>Flooring</h3>
+          <div class="service-col-image">
+            <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107340878_dark-hardwood-flooring-installation-lake-worth.jpg"
+                 alt="Rich dark hardwood flooring with natural grain installed in a living room."
+                 loading="lazy">
+          </div>
+          <p>Fast turnaround flooring upgrades that transform a room in days.</p>
         </div>
 
-        <div class="card">
-          <i class="fas fa-history card-icon"></i>
-          <h3>30+ Years Experience</h3>
-          <p>Shane Dooley and the Island Cabinets &amp; Floors team have spent over 30 years transforming homes and businesses across Brevard County.</p>
-        </div>
-
-        <div class="card">
-          <i class="fas fa-handshake card-icon"></i>
-          <h3>Integrity &amp; Excellence</h3>
-          <p>We offer straightforward advice, honest pricing, and a curated product selection chosen for long-term performance — not just today's sale.</p>
+        <div class="service-col">
+          <h3>Cabinets</h3>
+          <div class="service-col-image">
+            <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107334633_charcoal-grey-shaker-cabinets-marble-backsplash.jpg"
+                 alt="Custom charcoal grey shaker cabinets with marble countertops and backsplash."
+                 loading="lazy">
+          </div>
+          <p>Custom design + expert install built to fit your space.</p>
         </div>
 
       </div>
 
       <div class="section-cta">
-        <a href="about.html"   class="btn btn-outline-teal">Learn More About Us</a>
-        <a href="contact.html" class="btn btn-teal">Book a Measure</a>
+        <a href="tel:3212416460" class="btn btn-teal">
+          <span class="btn-line-1"><i class="fas fa-phone"></i> Call Now</span>
+          <span class="btn-line-2">(321) 241-6460</span>
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ============================
-       SERVICES
-       ============================ -->
-  <section id="services" class="section-padding" style="background: var(--dark);">
+  <!-- PROOF -->
+  <section id="proof" class="section-padding" style="background: var(--grey-light);">
     <div class="container">
-      <h2 class="section-title light">Our Services</h2>
-      <p class="section-subtitle light">Premium materials. Expert installation. Lasting results.</p>
+      <h2 class="section-title">Proof</h2>
+      <p class="section-subtitle">See some of our finest work.</p>
 
-      <div class="cards-grid">
-
-        <a href="flooring.html" class="service-card">
-          <i class="fas fa-border-all card-icon"></i>
-          <h3>Flooring</h3>
-          <p>Hardwood, vinyl plank, tile, and more. Fast turnaround — most in-stock materials installed in 1–3 days.</p>
-          <span class="card-link">Explore Flooring <i class="fas fa-arrow-right"></i></span>
-        </a>
-
-        <a href="cabinets.html" class="service-card">
-          <i class="fas fa-door-open card-icon"></i>
-          <h3>Cabinets</h3>
-          <p>Custom cabinet design and professional installation for kitchens, bathrooms, and beyond.</p>
-          <span class="card-link">Explore Cabinets <i class="fas fa-arrow-right"></i></span>
-        </a>
-
-        <a href="closets.html" class="service-card">
-          <i class="fas fa-archive card-icon"></i>
-          <h3>Closets</h3>
-          <p>Custom closet systems designed to maximize your space and keep your home organized.</p>
-          <span class="card-link">Explore Closets <i class="fas fa-arrow-right"></i></span>
-        </a>
-
-      </div>
-
-      <!-- 1×2 image table -->
-      <div class="image-pair">
-        <div class="image-pair-item">
-          <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107340878_dark-hardwood-flooring-installation-lake-worth.jpg"
-               alt="Rich dark hardwood flooring with natural grain installed in a living room under a coffee table."
-               loading="lazy">
-        </div>
-        <div class="image-pair-item">
-          <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776107334633_charcoal-grey-shaker-cabinets-marble-backsplash.jpg"
-               alt="Custom charcoal grey cabinets and marble countertops installed by Island Cabinets &amp; Floors in Lake Worth Beach"
-               loading="lazy">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================
-       PROOF
-       ============================ -->
-  <section id="proof" class="section-padding">
-    <div class="container">
       <div class="image-trio">
 
         <div class="image-trio-item">
@@ -218,151 +169,112 @@
         </div>
 
       </div>
-    </div>
-  </section>
-
-
-  <!-- ============================
-       WHY CHOOSE US
-       ============================ -->
-  <section id="why-us" class="section-padding" style="background: var(--grey-light);">
-    <div class="container">
-      <h2 class="section-title">What Sets Us Apart</h2>
-      <p class="section-subtitle">More than a showroom — a full-service design and installation partner.</p>
-
-      <div class="features-grid">
-
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
-          <h4>Financing Available</h4>
-          <p>Up to $200,000 through our financing partner — subject to approval.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-          <h4>Fast Turnaround</h4>
-          <p>In-stock flooring installed in as little as 1–3 days. No endless waiting.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-star"></i></div>
-          <h4>Curated Selection</h4>
-          <p>Every product we carry is chosen for quality and long-term performance.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h4>Design Consultation</h4>
-          <p>Straightforward design guidance — no sales pressure, just honest advice.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================
-       REVIEWS
-       ============================ -->
-  <section id="reviews" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">What Our Customers Say</h2>
-      <p class="section-subtitle">Real reviews from homeowners and businesses across Brevard County.</p>
-
-      <div class="reviews-grid">
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar"><i class="fas fa-user"></i></div>
-            <div class="review-meta">
-              <span class="review-name">Happy Customer</span>
-              <span class="review-date">Google Review</span>
-            </div>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"Absolutely love our new floors. Shane and his team were professional, fast, and the quality is outstanding. Highly recommend Island Cabinets &amp; Floors!"</p>
-        </div>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar"><i class="fas fa-user"></i></div>
-            <div class="review-meta">
-              <span class="review-name">Satisfied Homeowner</span>
-              <span class="review-date">Google Review</span>
-            </div>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"Our kitchen cabinets turned out better than we imagined. The team was knowledgeable, on time, and left our home spotless. We couldn't be happier."</p>
-        </div>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar"><i class="fas fa-user"></i></div>
-            <div class="review-meta">
-              <span class="review-name">Brevard County Resident</span>
-              <span class="review-date">Google Review</span>
-            </div>
-          </div>
-          <div class="review-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"Veterans who do great work — what more could you ask for? They transformed our master closet in one day. Fantastic experience from start to finish."</p>
-        </div>
-
-      </div>
-
-      <!--
-        REVIEWS WIDGET
-        ==============
-        TODO: Paste your reviews embed (e.g., HyppoAI widget, Elfsight, etc.) below.
-      -->
-      <div class="reviews-widget">
-        <script src="https://hyppohq.io/api/v1/widgets/embed/island-google-reviews" async></script>
-      </div>
 
       <div class="section-cta">
-        <a href="contact.html" class="btn btn-outline-teal">Leave a Review</a>
         <a href="tel:3212416460" class="btn btn-teal">
-          <i class="fas fa-phone"></i> (321) 241-6460
+          <span class="btn-line-1"><i class="fas fa-phone"></i> Call Now</span>
+          <span class="btn-line-2">(321) 241-6460</span>
         </a>
       </div>
     </div>
   </section>
 
 
-
-
-  <!-- ============================
-       FAQ
-       ============================ -->
-  <section id="faq" class="section-padding">
+  <!-- WHAT OUR CUSTOMERS SAY -->
+  <section id="reviews" class="section-padding">
     <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-subtitle">Answers to the questions we hear most often.</p>
+      <h2 class="section-title">What Our Customers Say</h2>
+
+      <div class="reviews-widget">
+        <script src="https://hyppohq.io/api/v1/widgets/embed/island-google-reviews" async></script>
+      </div>
+
+      <div class="section-cta">
+        <a href="https://api.hyppocrm.com/widget/form/9tksh5z8hnV0lyjHiR4M" class="btn btn-teal" target="_blank" rel="noopener noreferrer">
+          Leave a Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROCESS -->
+  <section id="process" class="section-padding" style="background: var(--dark);">
+    <div class="container">
+      <h2 class="section-title light">Process</h2>
+
+      <div class="process-4col">
+
+        <div class="process-step-simple">
+          <i class="fas fa-calendar-check"></i>
+          <span>Book</span>
+        </div>
+
+        <div class="process-step-simple">
+          <i class="fas fa-ruler-combined"></i>
+          <span>Measure</span>
+        </div>
+
+        <div class="process-step-simple">
+          <i class="fas fa-drafting-compass"></i>
+          <span>Design</span>
+        </div>
+
+        <div class="process-step-simple">
+          <i class="fas fa-tools"></i>
+          <span>Install</span>
+        </div>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="tel:3212416460" class="btn btn-outline">
+          <span class="btn-line-1"><i class="fas fa-phone"></i> Call Now</span>
+          <span class="btn-line-2">(321) 241-6460</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MAP -->
+  <section id="map-section" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Find Us Here</h2>
+    </div>
+    <iframe
+      class="map-embed"
+      src="https://maps.google.com/maps?q=297+North+Babcock+Street,+Melbourne,+FL+32935&output=embed"
+      allowfullscreen
+      loading="lazy"
+      title="Island Cabinets &amp; Floors — 297 North Babcock Street, Melbourne, FL 32935"></iframe>
+  </section>
+
+
+  <!-- FAQs -->
+  <section id="faq" class="section-padding" style="background: var(--grey-light);">
+    <div class="container">
+      <h2 class="section-title">FAQs</h2>
 
       <div class="faq-list">
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            How long does flooring installation take?
+            How long does it take to get new cabinets installed?
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            For in-stock materials, flooring installation typically takes just 1–3 days depending on the size of the space. If materials need to be ordered, plan for 1–2 weeks for delivery before installation begins. We'll give you a clear timeline during your measure appointment.
+            Most cabinet projects run on a product lead time of about 8–12 weeks after final design selections and deposit. Once materials arrive, we schedule install ASAP. Timelines vary by cabinet line and customization.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            How long does a cabinet project take?
+            How fast can you install flooring?
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            Custom cabinet projects typically have an 8–12 week product lead time from order to delivery, followed by the installation phase. We'll walk you through the full timeline during your design consultation so there are no surprises.
+            Flooring is usually a quick turnaround. If your material is in stock, we can often schedule installation within 1–2 weeks, and most installs are completed in 1–3 days depending on square footage, material type, and any subfloor prep.
           </div>
         </div>
 
@@ -372,90 +284,49 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-answer">
-            Yes! We offer financing up to $200,000 through our partner portal, subject to approval. Ask us about financing options during your consultation or contact us directly for details.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            What areas do you serve?
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="faq-answer">
-            We primarily serve Brevard County, Florida, including Melbourne, Palm Bay, Viera, Rockledge, Cocoa, Merritt Island, and surrounding communities. Contact us to confirm service availability in your area.
+            Yes — we offer financing options through our partner portal, with offers up to $200,000 (subject to approval).
           </div>
         </div>
 
       </div>
 
       <div class="section-cta">
-        <a href="contact.html" class="btn btn-teal">Book a Measure</a>
-        <a href="tel:3212416460" class="btn btn-outline-dark">
-          <i class="fas fa-phone"></i> (321) 241-6460
+        <a href="tel:3212416460" class="btn btn-teal">
+          <span class="btn-line-1"><i class="fas fa-phone"></i> Call Now</span>
+          <span class="btn-line-2">(321) 241-6460</span>
+        </a>
+        <a href="https://www.enhancify.com/island-cabinets-and-floors" class="btn btn-outline-teal" target="_blank" rel="noopener noreferrer">
+          Financing
         </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ============================
-       CTA BAND
-       ============================ -->
-  <section id="cta-section">
-    <div class="container">
-      <h2 class="section-title light">Ready to Transform Your Home?</h2>
-      <p>Schedule a free measure with our team and get started on your flooring, cabinet, or closet project today.</p>
-      <div class="section-cta" style="margin-top:0;">
-        <a href="contact.html" class="btn btn-gold">
-          <i class="fas fa-calendar-check"></i> Book a Measure
-        </a>
-        <a href="tel:3212416460" class="btn btn-outline">
-          <i class="fas fa-phone"></i> (321) 241-6460
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================
-       FOOTER
-       ============================ -->
+  <!-- FOOTER -->
   <footer id="site-footer">
     <div class="container footer-inner">
 
-      <div>
+      <div class="footer-col">
         <img src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776104346565_island-cabinets-and-floors-logo.png" alt="Island Cabinets &amp; Floors logo" class="footer-logo">
-        <p class="footer-tagline">Veteran-owned flooring, cabinet, and closet specialists<br>serving Brevard County for 30+ years.</p>
       </div>
 
-      <div>
-        <p class="footer-heading">Contact Us</p>
-        <ul class="footer-contact-list">
-          <li><i class="fas fa-map-marker-alt"></i> 297 North Babcock Street,<br>Melbourne, FL 32935</li>
-          <li><i class="fas fa-phone"></i><a href="tel:3212416460">(321) 241-6460</a></li>
-          <li><i class="fas fa-phone"></i><a href="tel:3215147775">(321) 514-7775</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:info@islandcabinetsandfloors.com">info@islandcabinetsandfloors.com</a></li>
-          <li><i class="fas fa-clock"></i>Mon: By appointment<br>Tue–Fri: 10am–3pm EST</li>
-        </ul>
+      <div class="footer-col">
+        <address class="footer-address">
+          297 North Babcock Street<br>
+          Melbourne, FL, USA
+        </address>
+        <p class="footer-hours">
+          Monday: by appointment<br>
+          Tuesday &ndash; Friday: 10am &ndash; 3pm EST<br>
+          Saturday &ndash; Sunday: closed
+        </p>
       </div>
 
-      <div>
-        <p class="footer-heading">Services</p>
-        <ul class="footer-nav-links">
-          <li><a href="flooring.html">Flooring</a></li>
-          <li><a href="cabinets.html">Cabinets</a></li>
-          <li><a href="closets.html">Closets</a></li>
-          <li><a href="contact.html">Book a Measure</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </div>
-
-      <div>
+      <div class="footer-col">
         <p class="footer-heading">Follow Us</p>
         <div class="social-icons">
-          <!-- TODO: Replace # with real social media profile URLs -->
+          <!-- TODO: Replace # with actual social media profile URLs -->
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i><span>Facebook</span>
           </a>
@@ -470,17 +341,21 @@
 
     </div>
 
+    <div class="footer-policy">
+      <div class="container">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+
     <div class="footer-bottom">
       <div class="container">
-        <p>Copyright &copy; <span id="footer-year"></span> Island Cabinets &amp; Floors &mdash; All Rights Reserved.</p>
         <p>Powered by <a href="https://hyppohq.ai/" target="_blank" rel="noopener noreferrer"><strong>HyppoAI</strong></a></p>
       </div>
     </div>
   </footer>
 
 
-  <!-- Site JavaScript -->
   <script src="js/main.js"></script>
-
 </body>
 </html>

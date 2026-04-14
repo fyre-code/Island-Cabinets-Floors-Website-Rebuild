@@ -308,13 +308,39 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--dark) 0%, #0e2323 60%, #162b2b 100%);
+  background-color: var(--dark);
 }
 
-/* Hero text */
+/* Slideshow layers */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Teal-dark overlay for text legibility */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 46, 46, 0.65);
+  z-index: 2;
+}
+
+/* Hero text above overlay */
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   text-align: center;
   padding: 80px 20px 60px;
   width: 100%;
@@ -1030,6 +1056,84 @@ ul {
 }
 
 /* ======================
+   17b. SERVICES 2-COLUMN
+   ====================== */
+.services-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.service-col h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 16px;
+}
+.service-col-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.service-col-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.service-col-image:hover img {
+  transform: scale(1.03);
+}
+.service-col p {
+  font-size: 0.97rem;
+  color: var(--text-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ======================
+   17c. PROCESS 4-COLUMN
+   ====================== */
+.process-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.process-step-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.process-step-simple i {
+  font-size: 2.8rem;
+  color: var(--teal);
+}
+.process-step-simple span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+
+/* ======================
+   17d. MAP SECTION
+   ====================== */
+#map-section .section-title {
+  margin-bottom: 32px;
+}
+.map-embed {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+/* ======================
    18. FOOTER
    ====================== */
 #site-footer {
@@ -1038,7 +1142,7 @@ ul {
 }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.4fr 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1.4fr 1fr;
   gap: 40px;
   padding: 60px 0 40px;
 }
@@ -1047,10 +1151,21 @@ ul {
   width: auto;
   margin-bottom: 16px;
 }
-.footer-tagline {
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-address {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+.footer-hours {
   font-size: 0.88rem;
   color: rgba(255,255,255,0.6);
-  line-height: 1.5;
+  line-height: 1.8;
   margin: 0;
 }
 .footer-heading {
@@ -1110,16 +1225,31 @@ ul {
 .social-icons a:hover { color: var(--teal); }
 .social-icons i { font-size: 1.1rem; width: 18px; text-align: center; }
 
-.footer-bottom {
+.footer-policy {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 18px 0;
+  padding: 14px 0;
+}
+.footer-policy .container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.footer-policy a {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+.footer-policy a:hover {
+  color: var(--teal);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 16px 0;
 }
 .footer-bottom .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
   font-size: 0.82rem;
   color: rgba(255,255,255,0.45);
 }
@@ -1182,9 +1312,9 @@ ul {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-  }
+  .services-2col   { grid-template-columns: 1fr; }
+  .process-4col    { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .footer-inner    { grid-template-columns: 1fr 1fr; }
   .gallery-item {
     width: calc((100% - 12px) / 2);
   }
@@ -1248,6 +1378,7 @@ ul {
   .section-title { font-size: 1.6rem; }
   .hero-title    { font-size: 1.8rem; }
   .features-grid { grid-template-columns: 1fr; }
+  .process-4col  { grid-template-columns: repeat(2, 1fr); }
   .footer-inner  { grid-template-columns: 1fr; }
   .gallery-item  { width: 100%; }
   .section-cta   { flex-direction: column; align-items: center; }
