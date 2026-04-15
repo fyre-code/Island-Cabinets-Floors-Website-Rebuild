@@ -320,4 +320,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+
+  // =====================
+  // REVIEW MODAL
+  // =====================
+  (function () {
+    var modal = document.createElement('div');
+    modal.id = 'review-modal';
+    modal.className = 'booking-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Leave a Review');
+    modal.innerHTML =
+      '<div class="booking-modal-inner">' +
+        '<button class="booking-modal-close" id="review-modal-close" aria-label="Close review form"><i class="fas fa-times"></i></button>' +
+        '<iframe src="https://hyppohq.io/w/leave-a-review?embed=true" style="width:100%;min-height:400px;border:none;" allowfullscreen></iframe>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    function openModal() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-review]');
+      if (btn) { e.preventDefault(); openModal(); }
+      if (e.target === modal) closeModal();
+    });
+
+    document.getElementById('review-modal-close').addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  })();
+
 });
