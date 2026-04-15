@@ -105,6 +105,13 @@ ul {
   white-space: nowrap;
   text-align: center;
   justify-content: center;
+  min-width: 260px;
+}
+/* Two-line buttons (Call Now style) */
+.btn:has(.btn-line-2) {
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 20px;
 }
 
 .btn-teal {
