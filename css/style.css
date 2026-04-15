@@ -1570,3 +1570,38 @@ ul {
 .booking-modal-close:hover {
   background: rgba(255, 255, 255, 0.3);
 }
+
+/* Call modal (desktop) */
+.call-modal-inner {
+  max-width: 360px;
+  text-align: center;
+}
+.call-modal-body {
+  padding: 56px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.call-modal-icon {
+  font-size: 2.4rem;
+  color: var(--teal);
+}
+.call-modal-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.call-modal-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.call-modal-number:hover {
+  color: var(--teal);
+}
