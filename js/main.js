@@ -321,52 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
 
-  // =====================
-  // CALL NOW — DESKTOP MODAL
-  // =====================
-  (function () {
-    var modal = document.createElement('div');
-    modal.id = 'call-modal';
-    modal.className = 'booking-modal';
-    modal.setAttribute('role', 'dialog');
-    modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', 'Call us');
-    modal.innerHTML =
-      '<div class="booking-modal-inner call-modal-inner">' +
-        '<button class="booking-modal-close" id="call-modal-close" aria-label="Close"><i class="fas fa-times"></i></button>' +
-        '<div class="call-modal-body">' +
-          '<i class="fas fa-phone call-modal-icon"></i>' +
-          '<p class="call-modal-label">Call Us</p>' +
-          '<a href="tel:3212416460" class="call-modal-number">(321) 241-6460</a>' +
-          '<a href="tel:3215147775" class="call-modal-number">(321) 514-7775</a>' +
-        '</div>' +
-      '</div>';
-    document.body.appendChild(modal);
-
-    function openModal() {
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    var isDesktop = window.matchMedia('(hover: hover)').matches;
-
-    document.addEventListener('click', function (e) {
-      var btn = e.target.closest('a[href^="tel:"]');
-      if (btn && isDesktop) { e.preventDefault(); openModal(); }
-      if (e.target === modal) closeModal();
-    });
-
-    document.getElementById('call-modal-close').addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-    });
-  })();
 
 
   // =====================
