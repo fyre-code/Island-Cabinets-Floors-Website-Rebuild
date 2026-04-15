@@ -279,4 +279,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // =====================
+  // BOOKING MODAL
+  // =====================
+  (function () {
+    var modal = document.createElement('div');
+    modal.id = 'booking-modal';
+    modal.className = 'booking-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Book a Measure');
+    modal.innerHTML =
+      '<div class="booking-modal-inner">' +
+        '<button class="booking-modal-close" id="booking-modal-close" aria-label="Close booking calendar"><i class="fas fa-times"></i></button>' +
+        '<iframe src="https://hyppohq.io/book/8f1844f1-5656-463b-ba0b-e71c595e0f7a?embed=true&theme=dark" style="width:100%;min-height:700px;border:none;" allowfullscreen></iframe>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    function openModal() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-booking]');
+      if (btn) { e.preventDefault(); openModal(); }
+      if (e.target === modal) closeModal();
+    });
+
+    document.getElementById('booking-modal-close').addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  })();
+
 });
