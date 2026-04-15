@@ -1495,11 +1495,22 @@ ul {
   }
   .nav-toggle { display: flex; }
 
+  /* Nav logo */
+  .brand-logo { height: 56px; }
+
   /* Hero & headings */
   .hero-title    { font-size: 2.2rem; }
   .section-title { font-size: 2.2rem; }
   .hero-title-sub { font-size: 1.1rem; }
   #hero.hero-inner { min-height: 40vh; }
+
+  /* Section whitespace */
+  .section-padding { padding: 50px 0; }
+  .hero-content    { padding: 60px 20px 40px; }
+
+  /* Buttons — full-width at tablet */
+  .hero-btn    { width: 100%; max-width: 300px; }
+  .section-cta { flex-direction: column; align-items: center; }
 
   /* Grids */
   .image-trio        { grid-template-columns: 1fr; }
@@ -1508,6 +1519,7 @@ ul {
   .about-story       { grid-template-columns: 1fr; gap: 32px; }
   .flooring-split    { grid-template-columns: 1fr; gap: 32px; }
   .about-story-image { order: -1; }
+  .flooring-split-image { order: -1; }
   .process-steps     { grid-template-columns: 1fr; }
   .contact-grid      { grid-template-columns: 1fr; }
   .blog-grid         { grid-template-columns: 1fr; }
@@ -1515,20 +1527,30 @@ ul {
   .gallery-preview   { grid-template-columns: repeat(2, 1fr); }
   .timeline-callout  { flex-direction: column; padding: 28px 24px; text-align: center; }
 
-  /* Footer */
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
+  /* Footer — single column at tablet */
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom .container { flex-direction: column; text-align: center; }
+
+  /* Map */
+  .map-embed { height: 300px; }
+
+  /* Booking modal iframes — avoid inner scroll on phone */
+  .booking-modal-inner iframe { min-height: 500px !important; }
 }
 
 @media (max-width: 480px) {
-  .section-title { font-size: 1.8rem; }
-  .hero-title    { font-size: 1.8rem; }
-  .features-grid { grid-template-columns: 1fr; }
-  .process-4col  { grid-template-columns: repeat(2, 1fr); }
-  .footer-inner  { grid-template-columns: 1fr; }
-  .gallery-item  { width: 100%; }
-  .section-cta   { flex-direction: column; align-items: center; }
-  .hero-btn      { width: 100%; max-width: 300px; }
+  .section-title   { font-size: 1.8rem; }
+  .hero-title      { font-size: 1.8rem; }
+  .features-grid   { grid-template-columns: 1fr; }
+  .process-4col    { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner    { grid-template-columns: 1fr; }
+  .gallery-item    { width: 100%; }
+  .section-cta     { flex-direction: column; align-items: center; }
+  .hero-btn        { width: 100%; max-width: 300px; }
+
+  /* Further reduce whitespace on phones */
+  .section-padding { padding: 36px 0; }
+  .hero-content    { padding: 40px 20px 30px; }
 }
 
 /* ======================
