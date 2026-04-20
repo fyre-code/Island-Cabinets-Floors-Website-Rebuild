@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // =====================
+  // DISABLE TEL LINKS ON DESKTOP
+  // =====================
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href^="tel:"]');
+    if (link && window.innerWidth > 768) e.preventDefault();
+  });
+
+
+  // =====================
   // DYNAMIC FOOTER YEAR
   // =====================
   const yearEl = document.getElementById('footer-year');
