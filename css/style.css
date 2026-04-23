@@ -304,6 +304,54 @@ ul {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Nav Dropdown */
+.nav-item { position: relative; display: flex; align-items: center; }
+.nav-dropdown-toggle {
+  display: flex; align-items: center; gap: 5px; cursor: pointer;
+  color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 500;
+  padding: 8px 12px; border-bottom: 2px solid transparent;
+  transition: color 0.2s; white-space: nowrap; text-decoration: none;
+}
+.nav-dropdown-toggle:hover,
+.nav-item.open .nav-dropdown-toggle { color: var(--teal); border-bottom-color: var(--teal); }
+.nav-chevron { font-size: 0.65rem; transition: transform 0.2s; }
+.nav-item.open .nav-chevron { transform: rotate(180deg); }
+.nav-dropdown {
+  display: none; position: absolute; top: calc(100% + 10px); left: 0;
+  background: var(--dark); min-width: 220px; border-top: 2px solid var(--teal);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3); z-index: 200;
+  list-style: none; padding: 6px 0; margin: 0;
+}
+.nav-item:hover .nav-dropdown,
+.nav-item.open .nav-dropdown { display: block; }
+.nav-dropdown li a {
+  display: block; padding: 9px 18px; color: rgba(255,255,255,0.85);
+  font-size: 0.88rem; font-weight: 400; border-bottom: none;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown li a:hover { background: rgba(43,191,186,0.12); color: var(--teal); }
+
+/* Area location pages */
+.area-story-section {
+  position: relative;
+  background: url('https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/be512ad3-464f-4874-9308-c1547557c2fb/root/1776199527839_About-background-image.png') center/cover no-repeat;
+  padding: 0;
+}
+.area-overlay { position: absolute; inset: 0; background: rgba(26,46,46,0.78); }
+.area-split {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch;
+}
+.area-split-image { overflow: hidden; }
+.area-split-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.area-split-box {
+  background: rgba(255,255,255,0.06); border-left: 1px solid rgba(255,255,255,0.15);
+  padding: 56px 48px; display: flex; flex-direction: column;
+  justify-content: center; gap: 24px; color: var(--white);
+}
+.area-split-box h2 { font-size: 1.7rem; color: var(--white); line-height: 1.3; }
+.area-split-box p { color: rgba(255,255,255,0.88); line-height: 1.75; font-size: 1rem; }
+
 /* ======================
    5. HERO SECTION
    ====================== */
@@ -871,6 +919,12 @@ ul {
   font-weight: 700;
   color: var(--dark);
   margin: 0 0 20px;
+}
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
 }
 .contact-info-item {
   display: flex;
@@ -1494,6 +1548,23 @@ ul {
     padding: 12px;
   }
   .nav-toggle { display: flex; }
+
+  /* Dropdown mobile */
+  .nav-item { flex-direction: column; align-items: flex-start; width: 100%; }
+  .nav-item:hover .nav-dropdown { display: none; }
+  .nav-item.open .nav-dropdown { display: block; }
+  .nav-dropdown-toggle { width: 100%; padding: 12px 24px; font-size: 1rem; border-bottom: none; }
+  .nav-dropdown {
+    position: static; box-shadow: none; border-top: none;
+    border-left: 3px solid var(--teal); background: rgba(255,255,255,0.05);
+    width: 100%; margin: 0; padding: 4px 0;
+  }
+  .nav-dropdown li a { padding: 9px 36px; font-size: 0.95rem; }
+
+  /* Area pages */
+  .area-split { grid-template-columns: 1fr; }
+  .area-split-image { min-height: 300px; order: -1; }
+  .area-split-box { padding: 36px 24px; border-left: none; border-top: 1px solid rgba(255,255,255,0.15); }
 
   /* Nav logo */
   .brand-logo { height: 56px; }

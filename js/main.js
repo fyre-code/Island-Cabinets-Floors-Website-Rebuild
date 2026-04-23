@@ -43,6 +43,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // =====================
+  // NAV DROPDOWN
+  // =====================
+  document.querySelectorAll('.nav-has-dropdown').forEach(item => {
+    const toggle = item.querySelector('.nav-dropdown-toggle');
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      const isOpen = item.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+
+  // =====================
   // HERO SLIDESHOW
   // =====================
   const hero   = document.getElementById('hero');
