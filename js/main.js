@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.innerHTML =
       '<div class="booking-modal-inner">' +
         '<button class="booking-modal-close" id="review-modal-close" aria-label="Close review form"><i class="fas fa-times"></i></button>' +
-        '<iframe src="https://hyppohq.io/w/leave-a-review?embed=true" style="width:100%;min-height:400px;border:none;" allowfullscreen></iframe>' +
+        '<iframe src="https://hyppohq.io/w/leave-a-review?embed=true" style="width:100%;min-height:300px;border:none;" allowfullscreen></iframe>' +
       '</div>';
     document.body.appendChild(modal);
 
